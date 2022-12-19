@@ -5,10 +5,10 @@
     "scripts": {
         "start": "node app.js",
         "commit": "cz",
-        "prettier": "prettier -c \"src/**/*.js\"",
-        "prettier:fix": "prettier -w \"src/**/*.js\"",
-        "lint": "eslint \"src/**/*.js\"",
-        "lint:fix": "eslint --fix \"src/**/*.js\"",
+        "prettier": "prettier -c \"**/*.js\"",
+        "prettier:fix": "prettier -w \"**/*.js\"",
+        "lint": "eslint \"**/*.js\"",
+        "lint:fix": "eslint --fix \"**/*.js\"",
         "code:fix": "npm run prettier:fix && npm run lint:fix"
     },
     "dependencies": {
