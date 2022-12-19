@@ -6,7 +6,10 @@
         "start": "node app.js",
         "commit": "cz",
         "prettier": "prettier --check .",
-        "prettier:fix": "prettier --write ."
+        "prettier:fix": "prettier --write .",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "code:fix": "npm run prettier:fix && npm run lint:fix"
     },
     "dependencies": {
         "cookie-parser": "~1.4.4",
@@ -19,6 +22,7 @@
     "devDependencies": {
         "commitizen": "^4.2.6",
         "cz-conventional-changelog": "^3.3.0",
+        "eslint": "^8.30.0",
         "nodemon": "^2.0.15",
         "prettier": "2.8.1"
     },
