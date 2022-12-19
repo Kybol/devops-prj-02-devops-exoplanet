@@ -14,7 +14,6 @@ jobs:
               with:
                   node-version: 16.17
             - run: npm ci
-            # - run: npm run lint
-            - run: npm run prettier:fix
+            - run: npm run code:fix
             # - run: npm test
             # - run: npm run build
