@@ -1,16 +1,16 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
 // const messagesTable = []
 
 /* GET home page. */
-router.get('/', (req, res) => {
-    res.render('index', {
+router.get("/", (req, res) => {
+    res.render("index", {
         exoplanetsTable: [
-            'Trappist-1-d',
-            'Trappist-1-e',
-            'Trappist-1-f',
-            'Trappist-1-g',
+            "Trappist-1-d",
+            "Trappist-1-e",
+            "Trappist-1-f",
+            "Trappist-1-g",
         ],
     });
 });

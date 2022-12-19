@@ -1,18 +1,18 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-const Message = require('../models/Message.js');
+const Message = require("../models/Message.js");
 
 /* GET forum. */
-router.get('/', (req, res) => {
-    res.render('forum/index', { messagesTable: Message.list() });
+router.get("/", (req, res) => {
+    res.render("forum/index", { messagesTable: Message.list() });
 });
 
 /* POST add forum. */
-router.post('/add', (req, res) => {
-    console.log('POST ADD FORUM');
+router.post("/add", (req, res) => {
+    console.log("POST ADD FORUM");
     Message.save({ message: req.body.message, author: req.body.author });
-    res.redirect('/forum');
+    res.redirect("/forum");
 });
 
 module.exports = router;

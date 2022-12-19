@@ -2,7 +2,7 @@ name: prj02 exoplanets CI
 
 on:
     pull_request:
-    branches: [main]
+        branches: [main]
 
 jobs:
     check_code:
