@@ -29,7 +29,7 @@ app.use('/forum', forumRouter)
 app.use((req, res, next) => next(createError(404)))
 
 // Show error hbs page
-app.use((error, req, res, next) => {
+app.use((error, req, res) => {
     res.status(error.status || 500)
     res.render('error', { error })
 })

@@ -4,12 +4,12 @@ const router = express.Router()
 const Exoplanet = require('../models/Exoplanet.js')
 
 /* GET exoplanets index. */
-router.get('/', (req, res, next) => {
+router.get('/', (req, res) => {
     res.render('exoplanets/index', { exoplanetsTable: Exoplanet.list() })
 })
 
 /* POST add exoplanet. */
-router.post('/add', (req, res, next) => {
+router.post('/add', (req, res) => {
     console.log('POST ADD EXOPLANET')
     Exoplanet.save({
         uniqueName: req.body.uniqueNameExoplanet,
@@ -20,7 +20,7 @@ router.post('/add', (req, res, next) => {
 })
 
 /* GET search exoplanet. */
-router.get('/search', (req, res, next) => {
+router.get('/search', (req, res) => {
     let exoplanetsTable = null
     let min3Char = false
     console.log('GET SEARCH EXOPLANET')
