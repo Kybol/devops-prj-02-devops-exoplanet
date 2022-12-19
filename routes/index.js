@@ -1,5 +1,5 @@
-const express = require('express')
-const router = express.Router()
+const express = require('express');
+const router = express.Router();
 
 // const messagesTable = []
 
@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
             'Trappist-1-f',
             'Trappist-1-g',
         ],
-    })
-})
+    });
+});
 
-module.exports = router
+module.exports = router;
