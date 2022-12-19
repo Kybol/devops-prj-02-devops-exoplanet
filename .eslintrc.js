@@ -4,13 +4,13 @@ module.exports = {
         commonjs: true,
         es2021: true,
     },
-    extends: ['prettier'],
+    extends: ["prettier"],
     overrides: [],
     parserOptions: {
-        ecmaVersion: 'latest',
+        ecmaVersion: "latest",
     },
     rules: {
-        'linebreak-style': ['error', 'unix'],
-        semi: ['error', 'always'],
+        "linebreak-style": ["error", "unix"],
+        semi: ["error", "always"],
     },
 };
