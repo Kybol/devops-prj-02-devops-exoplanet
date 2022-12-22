@@ -15,6 +15,9 @@
 </section>
 <section>
     <h1>Ajouter une Exoplanète découverte</h1>
+    {{#if error}}
+        <p> {{error}} </p>
+    {{/if}}
     <form method='post' action='/exoplanets/add'>
         <div>
             <label>Nom de l'exoplanète découverte : </label>

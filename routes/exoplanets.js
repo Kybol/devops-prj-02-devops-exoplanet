@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const Exoplanet = require("../models/Exoplanet.js");
+const checkNameExoplanet = require("../services/checkNameExoplanet.js");
 
 /* GET exoplanets index. */
 router.get("/", (req, res) => {
@@ -11,6 +12,13 @@ router.get("/", (req, res) => {
 /* POST add exoplanet. */
 router.post("/add", (req, res) => {
     console.log("POST ADD EXOPLANET");
+    if (!checkNameExoplanet(req.body.uniqueNameExoplanet)) {
+        res.render("exoplanets", {
+            exoplanetsTable: Exoplanet.list(),
+            error: `Format du nom incorrect. Utilisez des majuscules, chiffres, "-" ou "."`,
+        });
+        return;
+    }
     Exoplanet.save({
         uniqueName: req.body.uniqueNameExoplanet,
         hClass: req.body.hClassExoplanet,

@@ -10,7 +10,7 @@ module.exports = {
         ecmaVersion: "latest",
     },
     rules: {
-        "linebreak-style": ["error"],
+        "linebreak-style": ["error", "windows"],
         semi: ["error", "always"],
     },
 };
