@@ -16,4 +16,8 @@ describe("checkNameExoplanet tests suites", () => {
     it(`should return false`, () => {
         expect(checkNameExoplanet("")).toBe(false);
     });
+
+    it(`should return false for incorrect`, () => {
+        expect(checkNameExoplanet("Trappiste$****01****-00")).toBe(false);
+    });
 });
