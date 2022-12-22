@@ -8,4 +8,9 @@ describe("checkNameExoplanet tests suites", () => {
     it(`should return false`, () => {
         expect(checkNameExoplanet("name")).toBe(false);
     });
+
+    it(`should return false`, () => {
+        expect(checkNameExoplanet("NAME$")).toBe(false);
+    });
+    
 });
