@@ -1,7 +1,7 @@
 # exoplanets_devops
 
 ## Description
-
+Site regrouping Belgian discovered exoplanets.
 Vanilla JS app used to apply devops principles
 
 -   TDD
