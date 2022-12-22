@@ -15,7 +15,7 @@ router.post("/add", (req, res) => {
     if (!checkNameExoplanet(req.body.uniqueNameExoplanet)) {
         res.render("exoplanets", {
             exoplanetsTable: Exoplanet.list(),
-            error: `Format du nom incorrect. Utilisez des majuscules, chiffres, "-" ou "."`,
+            error: `Format du nom incorrect. Utilisez des majuscules, chiffres, "-" ou "."npm start`,
         });
         return;
     }
